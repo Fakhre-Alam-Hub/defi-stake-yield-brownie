@@ -26,6 +26,7 @@ def deploy_token_farm_and_dapp_token(update_front_end_flag=False):
     fau_token = get_contract("fau_token")
     weth_token = get_contract("weth_token")
 
+    # allowed token: dapp_token, fau_token(pretend as DAI), weth_token
     add_allowed_tokens(
         token_farm,
         {
@@ -35,8 +36,8 @@ def deploy_token_farm_and_dapp_token(update_front_end_flag=False):
         },
         account,
     )
-    if update_front_end_flag:
-        update_front_end()
+    # if update_front_end_flag:
+    #     update_front_end()
     return token_farm, dapp_token
 
 
@@ -92,5 +93,5 @@ def copy_files_to_front_end(src, dest):
 
 
 def main():
-    deploy_token_farm_and_dapp_token(update_front_end_flag=True)
+    deploy_token_farm_and_dapp_token(update_front_end_flag=False)
    

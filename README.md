@@ -7,7 +7,11 @@ issueTokens: Issue a reward to the users staking on your platform!
 
 
 Stake Token 
+
 Unstake Token 
+
 Issue Token 
+
 addAllowedTokens
+
 getEth values 
